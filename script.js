@@ -1,9 +1,9 @@
-// Fecha inicial: cumpleaños 25 abril 2026
+// Fecha inicial
     let fechaObjetivo = new Date("2026-04-25T00:00:00");
 
     // Crear elementos
     const titulo = document.createElement("h1");
-    titulo.textContent = "Cuenta atrás para tu fecha objetivo";
+    titulo.textContent = "Cuenta atrás para mi cumpleaños";
     document.body.appendChild(titulo);
 
     const contador = document.createElement("div");
@@ -23,7 +23,7 @@
 
       if (diferencia <= 0) {
         contador.textContent = "¡La fecha ha llegado!";
-        contador.style.backgroundColor = "#d60000"; // rojo fuerte
+        contador.style.backgroundColor = "#d60000"; 
         return;
       }
 
@@ -39,11 +39,11 @@
       // Cambiar colores según el tiempo restante
       const diasTotales = Math.floor(diferencia / (1000 * 60 * 60 * 24));
       if (diasTotales > 30) {
-        contador.style.backgroundColor = "#00b300"; // verde llamativo
+        contador.style.backgroundColor = "#00b300";
       } else if (diasTotales <= 30 && diasTotales > 7) {
-        contador.style.backgroundColor = "#ff8000"; // naranja intenso
+        contador.style.backgroundColor = "#ff8000"; 
       } else {
-        contador.style.backgroundColor = "#d60000"; // rojo intenso
+        contador.style.backgroundColor = "#d60000"; 
       }
     }
 
@@ -55,4 +55,4 @@
 
     // Actualizar cada segundo
     setInterval(actualizarContador, 1000);
-    actualizarContador(); // primera ejecución
+    actualizarContador(); 
